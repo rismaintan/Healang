@@ -22,13 +22,12 @@
         <form type="POST" id="fruitkha-contact" onsubmit="return valid_datas( this );">
           <p>
             <input type="text" onkeypress="return hanyaAngka(event)" placeholder="Jumlah Barang" name="name">
-            <input type="email" placeholder="Email" name="email">
+            <input type="text" placeholder="Nama Barang" name="nama_barang">
+            
           </p>
           <p>
-            <input type="tel" placeholder="Phone" name="phone">
-            <input type="text" placeholder="Alamat" name="alamat">
           </p>
-          <p><textarea name="deskripsi" id="message" cols="30" rows="10" placeholder="Deskripsi"></textarea></p>
+          <p><textarea cols="30" rows="10" placeholder="Deskripsi" name="deskripsi"></textarea></p>
           <div class="form-group">
             <input type="file" class="form-control-file" name="img_path">
           </div>
