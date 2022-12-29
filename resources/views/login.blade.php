@@ -1,64 +1,65 @@
-@extends('header')
-@section('content')
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="{{ url('fonts/icomoon/style.css')}}">
 
-<div class="breadcrumb-section breadcrumb-bg">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 offset-lg-2 text-center">
-          <div class="breadcrumb-text">
-            <p></p>
-            <h1>Login</h1>
+    <link rel="stylesheet" href="{{ url('css/owl.carousel.min.css')}}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url('css/bootstrap.min.css')}}">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="{{ url('css/style.css')}}">
+    <script src="{{ url('js/jquery-3.3.1.min.js')}}"></script>
+    <script src="{{ url('js/popper.min.js')}}"></script>
+    <script src="{{ url('js/bootstrap.min.js')}}"></script>
+    <script src="{{ url('js/main.js')}}"></script>
+
+    <title>Login (heal)ang</title>
+  </head>
+  <body>
+  
+
+  <div class="d-lg-flex half">
+    <div class="bg order-1 order-md-2" style="background-image: url('images/bg_1.jpg');"></div>
+    <div class="contents order-2 order-md-1">
+
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-7">
+            <h3>Login to <strong>(heal)ang</strong></h3>
+            <form action="#" method="post" >
+              <div class="form-group first">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" placeholder="your-email@gmail.com" id="username">
+              </div>
+              <div class="form-group last mb-3">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" placeholder="Your Password" id="password">
+              </div>
+              
+              <div class="d-flex mb-5 align-items-center">
+                {{-- <label class="control control--checkbox mb-0"><span class="caption">Remember me</span>
+                  <input type="checkbox" checked="checked"/>
+                  <div class="control__indicator"></div>
+                </label> --}}
+                <span class="ml-auto"><a href="#" class="forgot-pass">Forgot Password</a></span> 
+              </div>
+
+              <input type="submit" value="Log In" class="btn btn-block btn-primary">
+
+            </form>
           </div>
         </div>
       </div>
     </div>
+
+    
   </div>
-
-<div class="checkout-section mt-150 mb-150">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8">
-                <div class="checkout-accordion-wrap">
-                    <div class="accordion" id="accordionExample">
-                      <div class="card single-accordion">
-                        <div class="card-header" id="headingOne">
-                          {{-- <h5 class="mb-0">
-                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                              Billing Address
-                            </button>
-                          </h5> --}}
-                        </div>
-
-                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                          <div class="card-body">
-                            <div class="billing-address-form">
-                                <form action="index.html">
-                                    <p><input type="text" placeholder="Name"></p>
-                                    <p><input type="email" placeholder="Email"></p>
-                                    <p><input type="text" placeholder="Address"></p>
-                                    <p><input type="tel" placeholder="Phone"></p>
-                                    <p><textarea name="bill" id="bill" cols="30" rows="10" placeholder="Say Something"></textarea></p>
-                                </form>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4">
-                <div class="order-details-wrap">
-                    <img src="#" alt="">
-                    <p>Sudah memiliki akun?</p>
-                     <a href="/user" class="boxed-btn">Register</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-@endsection
-
+  </body>
+</html>
