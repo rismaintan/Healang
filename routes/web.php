@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ComplaintController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +16,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+Route::get('Complaint', [ComplaintController::class, 'Complaint'])->name('Complaint');
+Route::get('login', [UserController::class, 'login'])->name('login');
+
+Route::resource('user', UserController::class);
