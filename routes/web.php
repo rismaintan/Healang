@@ -1,10 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ComplaintController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\PengaduanController;
 
 /*
+
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
@@ -15,11 +16,11 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/', function () {
-    return view('detailComplaint');
-});
+// tampilkan data barang
+Route::get('/home', [UserController::class, 'index']);
 
-Route::get('Complaint', [ComplaintController::class, 'Complaint'])->name('Complaint');
-Route::get('login', [UserController::class, 'login'])->name('login');
+// menampilkan halaman pengaduan baru
+Route::get('/complaint', [UserController::class, 'create']);
 
-Route::resource('user', UserController::class);
+// memasukkan data pengaduan baru
+Route::post('/complaint/create', [UserController::class, 'store']);

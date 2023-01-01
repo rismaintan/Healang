@@ -80,9 +80,9 @@
 						<!-- menu start -->
 						<nav class="main-menu">
 							<ul>
-								<li class="current-list-item"><a href="/">Home</a>
+								<li class="current-list-item"><a href="{{ url('/home') }}">Home</a>
 								</li>
-								<li><a href="{{ route('Complaint') }}">Pengaduan</a></li>
+								<li><a href="{{ url('/complaint') }}">Pengaduan</a></li>
 								{{-- <li><a href="#">Pages</a>
 									<ul class="sub-menu">
 										<li><a href="404.html">404 page</a></li>
@@ -111,7 +111,7 @@
 								</li> --}}
 								<li>
 									<div class="header-icons">
-										<a class="shopping-cart" href="{{ route ('login')}}"><i class="fas fa-user"></i></a>
+										<a class="shopping-cart" href="{{ url('/login')}}"><i class="fas fa-user"></i></a>
 										{{-- <a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a> --}}
 									</div>
 								</li>

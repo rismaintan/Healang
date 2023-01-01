@@ -38,14 +38,17 @@
 
 			<div class="row">
 				<div class="col-lg-4 col-md-6 text-center">
+					@foreach($barangs as $thing)
 					<div class="single-product-item">
 						<div class="product-image">
 							<a href="#"><img src="img/products/product-img-1.jpg" alt=""></a>
 						</div>
-						<h3>Strawberry</h3>
-						<p class="product-price"><span>Per Kg</span> 85$ </p>
+						<h3>{{ $thing->nama_barang }}</h3>
+						<p class="product-price">{{ $thing->deskripsi_barang }}</p>
 						<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
 					</div>
+					@endforeach
+
 				</div>
 			</div>
 		</div>
@@ -337,5 +340,3 @@
 	</div>
 	<!-- end copyright -->
 	@endsection
-	
-	

@@ -19,19 +19,21 @@
 		<div class="container">
       <div id="form_status"></div>
       <div class="contact-form">
-        <form type="POST" id="fruitkha-contact" onsubmit="return valid_datas( this );">
+        <form action="/complaint/create" method="POST" enctype="multipart/form-data" id="fruitkha-contact" onsubmit="return valid_datas( this );">
+          @csrf
+          @method('POST')
           <p>
-            <input type="text" onkeypress="return hanyaAngka(event)" placeholder="Jumlah Barang" name="name">
+            <input type="text" onkeypress="return hanyaAngka(event)" placeholder="Jumlah Barang" name="jumlah_barang">
             <input type="text" placeholder="Nama Barang" name="nama_barang">
-            
           </p>
           <p>
           </p>
-          <p><textarea cols="30" rows="10" placeholder="Deskripsi" name="deskripsi"></textarea></p>
+          <p><textarea cols="30" rows="10" placeholder="Deskripsi" name="deskripsi_barang"></textarea></p>
           <div class="form-group">
-            <input type="file" class="form-control-file" name="img_path">
+            <input type="file" class="form-control-file" name="foto_barang">
           </div>
           <p><input type="submit" value="Submit"></p>
+
         </form>
       </div>
 
