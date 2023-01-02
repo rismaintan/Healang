@@ -45,7 +45,7 @@
 						</div>
 						<h3>{{ $thing->nama_barang }}</h3>
 						<p class="product-price">{{ $thing->deskripsi_barang }}</p>
-						<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+						<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i>Lihat Detail</a>
 					</div>
 					@endforeach
 

@@ -57,7 +57,7 @@ class UserController extends Controller
         ]);
 
         // pindahkan file ke public folder
-        $public_images = public_path() . 'images';
+        $public_images = 'public';
         $file_foto->move($public_images,$file_foto->getClientOriginalName());
 
         // menuju ke halaman barang setelah post berhasil
@@ -106,6 +106,10 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // menghapus list barang
+        DB:table('barangs')->where('id_barang',$id)->delete();
+
+        // setelah menghapus barang menuju ke halaman home
+        return redirect('/home');
     }
 }
